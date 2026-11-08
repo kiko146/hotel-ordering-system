@@ -1,5 +1,5 @@
 <header class="site-header">
-  <a class="brand" href="{{ url_for('home') }}">KIKO'S <span>&</span> OAK</a>
+  <a class="brand" href="{{ url_for('home') }}">KIKO'S <span>&</span> KITCHEN</a>
   <nav>
     {% for label, endpoint in navigation_links %}<a href="{{ url_for(endpoint) }}">{{ label }}</a>{% endfor %}
     <a href="{{ url_for('cart.view_cart') }}">Cart ({{ session.get('cart', {}).values()|sum }})</a>
