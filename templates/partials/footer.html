@@ -1,0 +1,6 @@
+<footer class="site-footer">
+  <div><a class="brand light" href="{{ url_for('home') }}">OLIVE <span>&</span> OAK</a><p>Good food. Warm hospitality. Every time.</p></div>
+  <div><strong>Explore</strong><a href="{{ url_for('about') }}">About us</a><a href="{{ url_for('customer_service') }}">Customer service</a><a href="{{ url_for('feedback.feedback_page') }}">Feedback</a></div>
+  <div><strong>Follow us</strong>{% for label, link in social_links %}<a href="{{ link }}" target="_blank" rel="noopener">{{ label }}</a>{% endfor %}</div>
+  <small>© 2026 Olive & Oak Hotel. Demo ordering website.</small>
+</footer>

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}{% block title %}Olive & Oak | Welcome{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy"><p class="eyebrow">A TASTE OF SOMETHING SPECIAL</p><h1>Good food.<br><em>Beautiful moments.</em></h1><p>Discover freshly prepared favourites, thoughtful service and a dining experience worth coming back for.</p><a class="button" href="{{ url_for('menu.menu_page') }}">Explore our menu</a></div>
+  <div class="hero-art"><div class="plate">🍽️</div><span class="art-note">Freshly prepared<br>with care</span></div>
+</section>
+<section class="section-heading"><div><p class="eyebrow">MADE FOR EVERY CRAVING</p><h2>Something delicious awaits</h2></div><a class="text-link" href="{{ url_for('menu.menu_page') }}">View full menu →</a></section>
+<div class="category-grid"><a class="category-card breakfast" href="{{ url_for('menu.menu_page', category='Breakfast') }}"><span>🥞</span><h3>Breakfast</h3><p>Start your day right</p></a><a class="category-card lunch" href="{{ url_for('menu.menu_page', category='Lunch') }}"><span>🥗</span><h3>Lunch</h3><p>Fresh midday favourites</p></a><a class="category-card dinner" href="{{ url_for('menu.menu_page', category='Dinner') }}"><span>🍝</span><h3>Dinner</h3><p>Make the evening special</p></a><a class="category-card dessert" href="{{ url_for('menu.menu_page', category='Dessert') }}"><span>🍰</span><h3>Desserts</h3><p>A little something sweet</p></a></div>
+<section class="welcome-strip"><div><p class="eyebrow">YOUR TABLE, YOUR WAY</p><h2>Order in a few easy steps.</h2><p>Choose your favourites, add them to your cart and place your order.</p></div><a class="button button-light" href="{{ url_for('menu.menu_page') }}">Order now</a></section>
+{% endblock %}
