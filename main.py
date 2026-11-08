@@ -9,7 +9,8 @@ from header import inject_header_data
 from footer import inject_footer_data
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'change-this-to-a-long-random-secret-key'
+import os
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 app.config['DATABASE'] = 'database/hotel.db'
 
 init_db(app.config['DATABASE'])
